@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Unigram</title>
+    <style>
+        body{
+          background-color: hsl(252, 30%, 95%);
+          height: 100%;
+        }
+  #customRange1{
+    height:10px ; 
+    writing-mode: bt-lr; /* Chrome, Safari, Edge, Opera */
+    /* -webkit-appearance: slider-vertical; Chrome, Safari, Edge */
+    transform: rotate(270deg); 
+    /* margin-right: 10px; */
+  }
+  @media screen and (max-width: 991px) {
+          .left-btn{
+            font-size:0.6rem;
+          }
+        }
+      </style>
+      
+</head>
+<body>
+  <div class=" col-12 d-lg-none d-flex bg-light h-50 w-100 rounded-top pt-1">
+    <div class=" col-10  text-center  mt-2 mb-0">
+      <a class="profile text-reset show" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true" style="text-decoration: none;">
+        <img src="/STATIC/IMG/logo2.png" alt=""  class="h-75 w-25 mt-1 ms-5 ps-2">
+    </div>
+    <div class=" col-2  text-end">
+      <a href="/PAGES/setting.html"><i class="fa-solid fa-gear mb-1 mt-4 me-2 fs-4 " style="cursor: pointer; color: black;"></i></a>
+    </div>
+  
+  </div>
+  <div class="row">
+    <div class="d-lg-none d-md-none col-sm-block flex-row d-flex fixed-bottom bg-light py-3 rounded-top-5">
+    <div class=" me-5"><a href="/PAGES/following.html" class="btn btn-light p-3 " aria-current="page"><i class="fa-solid fa-house d-inline-block me-4 ms-lg-4 ms-md-1 ms-sm-1 fs-2"></i> </a></div>
+    <div class=" me-5"><a href="/PAGES/home.html" class="btn btn-light d-flex p-3 "><i class="fa-solid fa-magnifying-glass  d-inline-block me-4 ms-lg-4 ms-md-1 ms-sm-1 fs-2"></i></a></div>
+    <div class=" me-5"><a href="/" class="btn btn-light p-3 d-flex"data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-circle-plus me-4 ms-lg-4 ms-md-1 ms-sm-1 fs-2 "></i></a></div>
+    <div class=" me-4"><a href="/PAGES/notification.html" class="btn btn-light  p-3 d-flex active"><i class="fa-regular fa-bell d-inline-block me-4 ms-lg-4 ms-md-1 ms-sm-1 fs-2 "></i></a></div>
+    <div class="dropend ">
+      <a class="profile text-reset show" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true" style="text-decoration: none;">
+        <div class="h-100 w-100 "><img src="/STATIC/IMG/joshua-sortino-f3uWi9G-lus-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle  me-2" style="aspect-ratio: 1 / 1;"></div>
+       </a>
+       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+         <li><a class="dropdown-item" href="/PAGES/profile.html"><i class="fa-regular fa-user me-2"></i>View profile</a></li>
+         <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-gear me-2"></i>Settings</a></li>
+         <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
+       </ul>
+    </div>
+    
+  </div>
+  </div>
+
+    <div class="container ">
+        <div class="row justify-content-between ">
+          <div class="col col-lg-3 col-md-1  flex-column d-flex  fixed-top offset-lg-0 offset-md-2 mt-md-5 "  >
+            <div class="col d-lg-block d-md-none d-sm-none mb-5 mt-5 ">
+                 <img src="/STATIC/IMG/logo2.png" alt="" class="img-fluid h-100 w-100 bg-light rounded-4 p-2 ">
+            </div>
+           <div class="col  d-lg-block d-md-block d-sm-none">
+            <div class="btn-group flex-column  w-100 mb-lg-5 mb-md-3 mt-lg-0 mt-md-5">
+                <a href="/PAGES/following.html" class="btn btn-light  p-3 d-flex rounded-top-4 " aria-current="page"><i class="fa-solid fa-house d-inline-block me-4 ms-lg-4 ms-md-1"></i> <h6 class="d-lg-inline-block d-md-none">Following</h6> </a>
+                <a href="/PAGES/home.html" class="btn btn-light p-3 d-flex "><i class="fa-solid fa-magnifying-glass  d-inline-block me-4 ms-lg-4 ms-md-1"></i><h6 class="d-lg-inline-block d-md-none">Explore</h6></a>
+                <a href="/PAGES/savedpost.html" class="btn btn-light p-3 d-flex"><i class="fa-regular fa-bookmark d-inline-block me-4 ms-lg-4 ms-md-1"></i><h6 class="d-lg-inline-block d-md-none">Saved Post</h6></a>
+                <a href="/PAGES/notification.html" class="btn btn-light  p-3 d-flex rounded-bottom-4 active"><i class="fa-regular fa-bell d-inline-block me-4 ms-lg-4 ms-md-1"></i><h6 class="d-lg-inline-block d-md-none">Notification</h6></a>
+              </div>
+           </div>
+           <div class="dropend d-lg-none d-md-block d-sm-none border-outline-info mb-3 ms-1">
+            <a class="profile text-reset show" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true" style="text-decoration: none;">
+             <div class="h-100 w-100 "><img src="/STATIC/IMG/joshua-sortino-f3uWi9G-lus-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle  me-2" style="aspect-ratio: 1 / 1;"></div>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="/PAGES/profile.html"><i class="fa-regular fa-user me-2"></i>View profile</a></li>
+              <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-gear me-2"></i>Settings</a></li>
+              <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+           <button type="button" class="left-btn btn btn-info w-lg-75 w-md-100 ms-lg-4 ms-md-1  d-lg-block d-md-block d-sm-none rounded-pill p-lg-1 p-md-0 " data-bs-toggle="modal" data-bs-target="#staticBackdrop"  >
+            Create post
+        </button>
+          </div>
+
+          <div class="col col-lg-6 col-md-9 col-sm-12 offset-lg-3 offset-md-3 offset-sm-0">
+            <h3 class="text-dark mt-lg-5 mt-md-3 fs-5 ms-3  mt-sm-4">All Notifications</h3>
+            <div class="panel bg-light rounded-1 " style="overflow: hidden;" >
+              <div class="notifications clearfix" style="overflow: hidden;">
+
+                
+                <div class="line  " > </div>
+
+                  <a href="" class="notification d-block d-flex text-decoration-none" style="cursor: pointer;">
+                    <div>
+                    <input type="range" class="form-range " min="0" max="2" id="customRange1" style="height: 100%; " >
+                    
+                  </div>
+                      <p class="mt-3 ">
+                        <b></b>
+                        No new notifications
+                      </p>
+                    
+                  </a>
+  
+              </div>
+            </div>
+              </div>
+
+
+
+
+
+
+
+
+              <div class="col col-3 d-lg-block d-md-none d-sm-none">
+            <div class="mt-5">
+              <a class="profile text-reset show" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true" style="text-decoration: none;">
+                <div class="user d-flex  w-100 bg-light p-3 rounded-4">
+                  <div class="h-25 w-25 "><img src="/STATIC/IMG/joshua-sortino-f3uWi9G-lus-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle  me-2" style="aspect-ratio: 1 / 1;"></div>
+                  <div class="">
+                    <div class="row d-row lh-1" style="cursor: pointer;" >
+                      <h3 class="fs-5 fw-normal  text-center" >Rafia Maskeen</h3>
+                      <small class="text-center mb-2 " >@rafia</small>
+                    </div>
+                  </div>
+                 </div>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="/PAGES/profile.html"><i class="fa-regular fa-user me-2"></i>View profile</a></li>
+                <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-gear me-2"></i>Settings</a></li>
+                <li><a class="dropdown-item" href="/PAGES/setting.html"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
+              </ul>
+            </div>
+            <h4 class="text-center mt-4">You may know</h4>
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/clark-tibbs-oqStl2L5oxI-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal ">afzal<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill  " style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/bo6fmoz0o1zuyjgbg1ti.png" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal ">saran<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill  " style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/x2tqickmhlp3gospbdu1.png" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal ms-2">sameer<i class="fa-solid fa-circle-check ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill  " style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/rtrwvm0clywq2nipbypu.png" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal ">ahmraz<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill " style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/nasa-Q1p7bh3SHj8-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal">test3<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill" style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/priscilla-du-preez-nF8xhLMmg0c-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal">labiqa<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill " style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+  
+            <div class="request mt-4 bg-light p-3 rounded-4">
+              <div class="user d-flex h-25 w-100">
+                <div class="h-25 w-25 "><img src="/STATIC/IMG/andrew-neel-QLqNalPe0RA-unsplash.jpg" alt="" class="img-thumbnail  rounded-circle " style="aspect-ratio: 1 / 1;"></div>
+                <div class="">
+                  <div class="row d-row ms-2">
+                    <h3 class="fs-6 fw-normal">laiba<i class="fa-solid fa-circle-check fs-6 ms-2" style="color: blue;"></i></h3>
+                    <div class="btn btn-info btn-sm rounded-pill" style="width: 75%; ">Follow</div>
+                  </div>
+                </div>
+               </div>
+            </div>
+          </div>
+          </div>
+          <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Create new post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="What's in your mind??" class="h-25 w-100 border-0"></textarea>
+                            <img src="" alt="" id="displayuploadimage" style="display: block; width: 100%;">
+                            <div class="input-group mb-3">
+                                <label class="" for="postImage" id="image-upload-icon"><i class="fa-regular fa-image text-info fs-2 mt-1"></i></label>
+                                <input type="file" accept="image/*" name="postImage" id="postImage" class="d-none">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-info">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  
+  </body>
+  </html>  
